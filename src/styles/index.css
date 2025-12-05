@@ -9,3 +9,21 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.iluminarRojo {
+
+    background-color: red;
+    box-shadow: 50px rgb(255, 255, 229);
+}
+
+.iluminarVerde {
+
+    background-color: green;
+    box-shadow: 50px rgb(255, 255, 229);
+}
+
+.iluminarAmarillo {
+
+    background-color: yellow;
+    box-shadow: 50px rgb(255, 255, 229);
+}
