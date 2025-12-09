@@ -9,21 +9,91 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.wrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.palito {
+    background-color: black;
+    height: 100px;
+    width: 20px;
+   
+}
+.semaforo { 
+    background-color: black;
+    height: 300px;
+    width:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 10px;
+}
+    
+.rojo {
+    background-color: rgba(255, 0, 0, 0.505);
+justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.amarillo {
+    background-color: rgba(255, 255, 0, 0.549);
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.verde {
+    background-color: rgba(0, 128, 0, 0.605);
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
 
 .iluminarRojo {
 
-    background-color: red;
-    box-shadow: 50px rgb(255, 255, 229);
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 0 15px 3px rgb(255, 255, 229);
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 0;
 }
 
 .iluminarVerde {
 
-    background-color: green;
-    box-shadow: 50px rgb(255, 255, 229);
+    background-color: rgb(60, 237, 60);
+    box-shadow: 0 0 15px 3px rgb(255, 255, 229);
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 0;
 }
 
 .iluminarAmarillo {
 
-    background-color: yellow;
-    box-shadow: 50px rgb(255, 255, 229);
+    background-color: rgb(255, 255, 0);
+    box-shadow: 0 0 15px 3px rgb(255, 255, 229);
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 0;
 }

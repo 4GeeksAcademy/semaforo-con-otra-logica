@@ -1,79 +1,73 @@
 import { useState } from "react"
-
+import "../../styles/index.css"
 
 
 const Luces = () => {
 
-    const [luzOnRojo, setLuzOnRojo] = useState(null)
-    const [luzOnAmarillo, setLuzOnAmarillo] = useState(null)
-    const [luzOnVerde, setLuzOnVerde] = useState(null)
+    const [luzOnRojo, setLuzOnRojo] = useState(false)
+    const [luzOnAmarillo, setLuzOnAmarillo] = useState(false)
+    const [luzOnVerde, setLuzOnVerde] = useState(false)
 
-    const [contadorLuzRojo, setContadorLuzRojo] = useState(0)
-    const [contadorLuzAmarillo, setContadorLuzAmarillo] = useState(0)
-    const [contadorLuzVerde, setContadorLuzVerde] = useState(0)
 
     const handleClickRojo = () => {
 
-        setContadorLuzRojo(contadorLuzRojo + 1)
-        setLuzOnRojo(true)
+        setLuzOnRojo(!luzOnRojo)
         setLuzOnAmarillo(false)
         setLuzOnVerde(false)
-        if (contadorLuzRojo === 1) {
-            setLuzOnRojo(false)
-            setContadorLuzRojo(0)
-            setContadorLuzAmarillo(0)
-            setContadorLuzVerde(0)
-        }
+
+
     }
 
     const handleClickAmarillo = () => {
-        setContadorLuzAmarillo(contadorLuzAmarillo + 1)
-        setLuzOnAmarillo(true)
+
+        setLuzOnAmarillo(!luzOnAmarillo)
         setLuzOnRojo(false)
         setLuzOnVerde(false)
-        if (contadorLuzAmarillo === 1) {
-            setLuzOnAmarillo(false)
-            setContadorLuzAmarillo(0)
-            setContadorLuzRojo(0)
-            setContadorLuzVerde(0)
-        }
+
+
+
     }
 
     const handleClickVerde = () => {
-        setContadorLuzVerde(contadorLuzVerde + 1)
-        setLuzOnVerde(true)
+
+        setLuzOnVerde(!luzOnVerde)
         setLuzOnAmarillo(false)
         setLuzOnRojo(false)
 
-        if (contadorLuzVerde === 1) {
-            setLuzOnVerde(false)
-            setContadorLuzVerde(0)
-            setContadorLuzRojo(0)
-            setContadorLuzAmarillo(0)
-        }
+
+
 
     }
 
 
 
-    console.log("soy luz roja! ---->", luzOnRojo + "      soy----> ", contadorLuzRojo);
-    console.log("soy luz amarilla ---->", luzOnAmarillo + "       soy---->", contadorLuzAmarillo);
-    console.log("soy luz verde! ---->", luzOnVerde + "        soy---->", contadorLuzVerde);
-    
+    console.log("soy luz roja! ---->", luzOnRojo);
+    console.log("soy luz amarilla ---->", luzOnAmarillo);
+    console.log("soy luz verde! ---->", luzOnVerde);
+
 
 
 
 
     return (
-        <div className="text-center">
-            <div className="bg-danger" onClick={handleClickRojo}>
-                <p>Quiero ser un circulo uwu</p>
+        <div className="wrapper">
+            <div className="palito">
             </div>
-            <div className="bg-warning" onClick={handleClickAmarillo}>
-                <p>Quiero ser un circulo uwu</p>
-            </div>
-            <div className="bg-success" onClick={handleClickVerde}>
-                <p>Quiero ser un circulo uwu</p>
+            <div className="semaforo">
+
+                <div className={luzOnRojo === true ? "iluminarRojo" : "rojo"}
+                    onClick={handleClickRojo}>
+                </div>
+
+                <div className={luzOnAmarillo === true ? "iluminarAmarillo" : "amarillo"}
+                    onClick={handleClickAmarillo}>
+
+                </div>
+
+                <div className={luzOnVerde === true ? "iluminarVerde" : "verde"}
+                    onClick={handleClickVerde}>
+
+                </div>
             </div>
         </div>
     )
